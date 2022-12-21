@@ -516,7 +516,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Page1_Query1",
               "name": "Query1",
               "confirmBeforeExecute": false,
               "pluginType": "DB",

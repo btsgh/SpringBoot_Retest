@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Slack Bot",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\t\n\tonOpen: () => {\n\t\tif(!appsmith.store?.formData?.channels) {showModal('Modal1')}\n\t},\n\t\n\tstoreFormData: async () => {\n\t\tawait storeValue('formData', JSONForm1.formData);\n\t\tstoreValue('fieldState',JSONForm1.fieldState);\n\t\tcloseModal('Modal1')\n\t},\n\n\n\tsetupChannels: () => {\n\t\treturn appsmith.store?.formData?.channels?.map(ch => {return {'label':ch['slack_channels']['customField2'],'value':ch['slack_channels']['customField1']}}) || [{'label':'enter channel info in setup form','value':''}]\n\t},\n\n\tsetupMentionUsers: () => {\n\t\treturn appsmith.store?.formData?.mention_users?.map(mu => {return {'label':mu.firstField,'value':`<@${mu.customField1}>`}})|| [{'label':'enter user info in setup form','value':''}]\n\t},\n\t\n\tclearSetup: () => {\n\t\tstoreValue('formData','');\n\t},\n\t\n\n\tfilterByValue: (data, key, selOption) => {\n\t\t// filters data where key == selOption or selOption == 'ALL' \n\t\treturn data.filter(\n\t\t\trow => {\n\t\t\t\tlet keys = key.split(\".\"), len = keys.length;\n\t\t\t\tlet value = len == 1 ? row[key] : \n\t\t\t\tlen == 2 ? row[keys[0]][keys[1]] : \n\t\t\t\t\"\";\n\t\t\t\treturn value == selOption || selOption == \"ALL\"\n\t\t\t}\n\t\t)\n\t},\n\topenSetup: async () => {\n\t\tif(appsmith.mode == \"EDIT\") {showModal('Modal1')}\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Slack Bot_JSObject1",
+  "deleted": false,
+  "gitSyncId": "63a280dcdbda1c5bc1e4ebfe_63a2b436dbc2360d1c17a702"
+}

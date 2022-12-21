@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "Query1",
+    "name": "InsertQ1",
     "datasource": {
       "name": "MySQL",
       "pluginId": "mysql-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM users where role = 'Admin' ORDER BY id LIMIT 10\n",
+      "body": "INSERT INTO users\n  (name, gender, email)\nVALUES\n  (\n    {{ Input1.text }},\n    {{ Select1.selectedOptionLabel }},\n    {{ Input2.text }}\n  );",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -27,17 +27,25 @@
       ]
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      " Input1.text ",
+      " Input2.text ",
+      " Select1.selectedOptionLabel "
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page2_Query1",
+  "id": "Page2_InsertQ1",
   "deleted": false,
-  "gitSyncId": "63a27e3bdbda1c5bc1e4ebd7_63a28062dbda1c5bc1e4ebf3"
+  "gitSyncId": "63a27e3bdbda1c5bc1e4ebd7_63a2b801dbc2360d1c17a72d"
 }

@@ -1949,6 +1949,7 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Public.users_SelectQuery",
               "name": "SelectQuery",
               "confirmBeforeExecute": false,
               "pluginType": "DB",

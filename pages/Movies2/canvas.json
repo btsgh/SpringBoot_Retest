@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Movies",
-    "slug": "movies",
+    "name": "Movies2",
+    "slug": "movies2",
     "layouts": [
       {
         "viewMode": false,
@@ -1905,7 +1905,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Movies_FindQuery",
+              "id": "Movies2_FindQuery",
               "name": "FindQuery",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -1927,7 +1927,7 @@
           "data_table"
         ],
         "validOnPageLoadActions": true,
-        "id": "Movies",
+        "id": "Movies2",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -1937,5 +1937,5 @@
     "policies": []
   },
   "deleted": false,
-  "gitSyncId": "63a280dcdbda1c5bc1e4ebfe_63a28c5adbda1c5bc1e4ec23"
+  "gitSyncId": "63a280dcdbda1c5bc1e4ebfe_63a2b5dedbc2360d1c17a70c"
 }

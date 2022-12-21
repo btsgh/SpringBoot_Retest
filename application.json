@@ -27,6 +27,10 @@
     {
       "id": "Public.users",
       "isDefault": false
+    },
+    {
+      "id": "Movies2",
+      "isDefault": false
     }
   ],
   "viewMode": false,
